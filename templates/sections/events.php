@@ -64,11 +64,11 @@ if ( ! $events_query->have_posts() ) {
 			<a class="event" href="<?php the_permalink(); ?>">
 				<h3 class="event-title"><span class="event-title-inner"><?php the_title(); ?></span></h3>
 				<span class="event-date">
-					<i class="fa fa-calendar" aria-hidden="true"></i>
+					<i class="fa fa-calendar left" aria-hidden="true"></i>
 					<span class="event-date-text"><?php echo esc_attr( $event_start_date_formatted ); ?></span>
 				</span>
 				<span class="event-time">
-					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<i class="fa fa-clock-o left" aria-hidden="true"></i>
 					<span class="event-time-text"><?php echo esc_attr( $event_start_time ); ?></span>
 				</span>
 			</a>

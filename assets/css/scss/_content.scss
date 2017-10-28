@@ -291,13 +291,17 @@ p {
 	.event-time,
 	.event-date {
 		font-size: 16px;
+		margin-right: 10px;
 		.fa {
 			color: $orange;
 		}
 		.event-time-text,
 		.event-date-text {
 			display: inline-block;
-			margin-left: 10px;
+		}
+
+		&.event-time {
+			margin-right: 0;
 		}
 	}
 
