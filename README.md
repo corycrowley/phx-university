@@ -1,3 +1,3 @@
-# Phoenix University WordPress Theme
+# PHX University WordPress Theme
 
-University demo theme to display a list of events.
+Example theme to mimic a University for WordCamp Phoenix.
