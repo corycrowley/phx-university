@@ -11,15 +11,15 @@
  *
  * @since 1.0.0
  */
-add_action( 'after_setup_theme', 'hm_university_theme_setup' );
-add_filter( 'acf/fields/google_map/api', 'hm_university_google_maps_key' );
+add_action( 'after_setup_theme', 'phx_university_theme_setup' );
+add_filter( 'acf/fields/google_map/api', 'phx_university_google_maps_key' );
 
 /**
  * Theme Setup.
  *
  * @since 1.0.0
  */
-function hm_university_theme_setup() {
+function phx_university_theme_setup() {
 	add_theme_support( 'title-tag' );
 }
 
@@ -32,7 +32,7 @@ function hm_university_theme_setup() {
  *
  * @return array $api
  */
-function hm_university_google_maps_key( $api ) {
+function phx_university_google_maps_key( $api ) {
 
 	$api['key'] = PHX_GOOGLE_MAPS_API_KEY;
 

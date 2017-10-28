@@ -11,17 +11,17 @@
  *
  * @since 1.0.0
  */
-add_action( 'init', 'hm_university_register_event_post_type' );
-add_action( 'init', 'hm_university_register_event_location_taxonomy' );
-add_action( 'init', 'hm_university_register_event_category_taxonomy' );
-add_filter( 'post_updated_messages', 'hm_university_event_post_type_messages' );
+add_action( 'init', 'phx_university_register_event_post_type' );
+add_action( 'init', 'phx_university_register_event_location_taxonomy' );
+add_action( 'init', 'phx_university_register_event_category_taxonomy' );
+add_filter( 'post_updated_messages', 'phx_university_event_post_type_messages' );
 
 /**
  * Register Event Post Type.
  *
  * @since 1.0.0
  */
-function hm_university_register_event_post_type() {
+function phx_university_register_event_post_type() {
 	register_post_type( 'event', array(
 		'labels'                => array(
 			'name'               => __( 'Events', 'phx-university' ),
@@ -59,7 +59,7 @@ function hm_university_register_event_post_type() {
  *
  * @since 1.0.0
  */
-function hm_university_register_event_location_taxonomy() {
+function phx_university_register_event_location_taxonomy() {
 	$labels = array(
 		'name'              => _x( 'Location', 'taxonomy general name', 'textdomain' ),
 		'singular_name'     => _x( 'Location', 'taxonomy singular name', 'textdomain' ),
@@ -92,7 +92,7 @@ function hm_university_register_event_location_taxonomy() {
  *
  * @since 1.0.0
  */
-function hm_university_register_event_category_taxonomy() {
+function phx_university_register_event_category_taxonomy() {
 	$labels = array(
 		'name'              => _x( 'Category', 'taxonomy general name', 'textdomain' ),
 		'singular_name'     => _x( 'Category', 'taxonomy singular name', 'textdomain' ),
@@ -129,7 +129,7 @@ function hm_university_register_event_category_taxonomy() {
  *
  * @return array $messages
  */
-function hm_university_event_post_type_messages( $messages ) {
+function phx_university_event_post_type_messages( $messages ) {
 	global $post;
 
 	$permalink = get_permalink( $post );
