@@ -17,9 +17,12 @@ tmp
 access_log
 .sass-cache
 Movefile
+composer.lock
+package-lock.json
 
 # Ignore specific directories
 node_modules
+vendor
 
 # Ignore OS generated files
 .DS_Store
@@ -84,40 +87,3 @@ ehthumbs.db
 
 # Forum software we probably shouldn't support anyway
 forum
-
-# Do not ignore Skyhook specific files
-!skyinc
-!skyinc/local-config.php
-!skyinc/staging-config.php
-!skyinc/Movefile
-
-# ---------------------------------
-# Start WordPress specific ignoring
-# ---------------------------------
-
-# Ignore everything in the root except the "wp-content" directory.
-!.gitignore
-!wp-content/
-
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
-wp-content/*
-!wp-content/plugins/
-!wp-content/themes/
-!wp-content/index.php
-wp-content/*.sql
-
-# Ignore some specific plugins & things
-wp-content/plugins/wpengine-snapshot/snapshots/*
-wp-content/uploads/snapshots
-wp-content/themes/*/cache
-wp-content/plugins/*/cache
-wp-content/blogs.dir/*/*
-wp-content/backup
-wp-content/plugins/uploads-by-proxy
-wp-content/plugins/query-monitor
-
-# Ignore everything in the "themes" directory, except the themes you
-# specify (see the commented-out example for a hint on how to do this.)
-# wp-content/themes/* 						# uncomment
-# !wp-content/themes/my-theme/				# update
