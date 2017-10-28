@@ -288,15 +288,21 @@ p {
 		justify-content: center;
 	}
 
+	.event-time,
 	.event-date {
 		font-size: 16px;
 		.fa {
 			color: $orange;
 		}
+		.event-time-text,
 		.event-date-text {
 			display: inline-block;
 			margin-left: 10px;
 		}
+	}
+
+	.event-date {
+		margin-right: 15px;
 	}
 
 	&:hover {
@@ -307,6 +313,7 @@ p {
 			color: $white;
 		}
 
+		.event-time,
 		.event-date {
 			.fa {
 				color: $white;
@@ -336,6 +343,31 @@ p {
 	}
 }
 
+.event-meta {
+	margin-bottom: 25px;
+	.event-location,
+	.event-presenter,
+	.event-time,
+	.event-date {
+		font-size: 16px;
+		color: $content-color;
+		.fa {
+			color: $orange;
+		}
+		.event-location-text,
+		.event-presenter-text,
+		.event-time-text,
+		.event-date-text {
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		.event-location {
+			margin: 0;
+		}
+	}
+}
+
 /* Footer */
 .footer {
 	padding: 0 80px 50px;
@@ -351,5 +383,21 @@ p {
 
 	@media only screen and (max-width: 320px) {
 		padding: 0 25px 50px;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 0 30px;
+	height: 50px;
+	line-height: 50px;
+	color: $white;
+	background: $orange;
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: $white;
+		background: $orange;
 	}
 }

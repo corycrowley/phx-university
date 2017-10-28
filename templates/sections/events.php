@@ -59,12 +59,17 @@ if ( ! $events_query->have_posts() ) {
 		<?php while ( $events_query->have_posts() ) { $events_query->the_post();
 			$event_start_date = get_field( 'event_start_date' );
 			$event_start_date_formatted = date( 'F j', strtotime( $event_start_date ) );
+			$event_start_time = get_field( 'event_start_time' );
 			?>
 			<a class="event" href="<?php the_permalink(); ?>">
 				<h3 class="event-title"><span class="event-title-inner"><?php the_title(); ?></span></h3>
 				<span class="event-date">
 					<i class="fa fa-calendar" aria-hidden="true"></i>
 					<span class="event-date-text"><?php echo esc_attr( $event_start_date_formatted ); ?></span>
+				</span>
+				<span class="event-time">
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+					<span class="event-time-text"><?php echo esc_attr( $event_start_time ); ?></span>
 				</span>
 			</a>
 		<?php } wp_reset_query(); wp_reset_postdata(); ?>
